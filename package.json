@@ -1,0 +1,29 @@
+{
+  "name": "henesis-example-compound",
+  "version": "1.0.0",
+  "description": "henesis wallet example for compound",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HAECHI-LABS/henesis-example-compound.git"
+  },
+  "keywords": [
+    "henesis",
+    "smart-contract",
+    "wallet"
+  ],
+  "author": "leekt216@gmail.com",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/HAECHI-LABS/henesis-example-compound/issues"
+  },
+  "homepage": "https://github.com/HAECHI-LABS/henesis-example-compound#readme",
+  "dependencies": {
+    "@haechi-labs/henesis-wallet-core": "^2.3.2",
+    "bn.js": "^5.1.3",
+    "web3": "^1.2.11"
+  }
+}
