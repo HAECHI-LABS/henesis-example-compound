@@ -7,7 +7,7 @@ const {env, masterWalletId, userWalletId} = require('./config.json');
 const sdk = new SDK({secret:secret, accessToken:accessToken, env:env});
 
 const Web3 = require('web3');
-const web3 = new Web3(`https://tn.henesis.io/ethereum/mainnet?clientId=${tnClientId}`);
+const web3 = new Web3(`http://localhost:8545`);
 
 const token_abi = require('./abis/token.json');;
 const ctoken_abi = require('./abis/ctoken.json');
