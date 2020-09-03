@@ -1,13 +1,13 @@
 const {SDK} = require("@haechi-labs/henesis-wallet-core");
 const {BN} = require('bn.js');
-const {tnClientId, secret,token,password} = require('./credentials.json');
+const {tnClientId, secret,accessToken,password} = require('./credentials.json');
 //env :2 == testnet
 //env :3 == mainnet
 const {env, masterWalletId, userWalletId} = require('./config.json');
-const sdk = new SDK({secret:secret, accessToken:token, env:env});
+const sdk = new SDK({secret:secret, accessToken:accessToken, env:env});
 
 const Web3 = require('web3');
-const web3 = new Web3(`https://tn.henesis.io/ethereum/mainnet?clientId=${}`);
+const web3 = new Web3(`https://tn.henesis.io/ethereum/mainnet?clientId=${tnClientId}`);
 
 const token_abi = require('./abis/token.json');;
 const ctoken_abi = require('./abis/ctoken.json');
@@ -31,6 +31,6 @@ async function approve(){
   const approve_encoded = token.methods.approve(ctoken_address, approve_amount).encodeABI();
   console.log(approve_encoded);
   const approve_response = await user.contractCall(token_address,0,approve_encoded,password);
-  console.log(await user.transactions.getTransaction(approve_response.id));
+  console.log(await sdk.eth.transactions.getTransaction(approve_response.id));
 }
 approve();

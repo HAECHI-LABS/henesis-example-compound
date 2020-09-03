@@ -1,11 +1,13 @@
 const {SDK} = require("@haechi-labs/henesis-wallet-core");
 const {BN} = require('bn.js');
-const {secret,token,password} = require('./credentials.json');
+const {tnClientId, secret,accessToken,password} = require('./credentials.json');
+//env :2 == testnet
+//env :3 == mainnet
 const {env, masterWalletId, userWalletId} = require('./config.json');
-const sdk = new SDK({secret:secret, accessToken:token, env:env});
+const sdk = new SDK({secret:secret, accessToken:accessToken, env:env});
 
 const Web3 = require('web3');
-const web3 = new Web3(`https://tn.henesis.io/ethereum/mainnet?clientId=`);
+const web3 = new Web3(`https://tn.henesis.io/ethereum/mainnet?clientId=${tnClientId}`);
 
 const token_abi = require('./abis/token.json');;
 const ctoken_abi = require('./abis/ctoken.json');
@@ -30,6 +32,6 @@ async function mint(){
   console.log(mint_encoded);
   const mint_response = await user.contractCall(ctoken_address, 0, mint_encoded,password);
   console.log(mint_response);
-  console.log(await user.transactions.getTransaction(mint_response.id));
+  console.log(await sdk.eth.transactions.getTransaction(mint_response.id));
 }
 mint();
