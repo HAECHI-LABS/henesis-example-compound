@@ -47,6 +47,8 @@ ex. node borrow.js
 
 ### 파일 설명
 
+> 모든 파일에 대해 사용할 때 token_address 값과 ctoken_address 값을 변경하여야 합니다
+
 - enable.js : supply를 진행하기 위해 token을 ctoken이 사용할 수 있도록 ERC20#approve()함수를 호출하는 스크립트입니다. 샘플 스크립트에서는 Ropsten의 Dai를 cDai에게 무한히 enable 시키는 스크립트가 작성되어있습니다.
 
 - supply.js : token을 이용하여 ctoken을 생성하기 위한 스크립트 입니다. 파일의 `amount`값에 해당하는 token을 ctoken에게 전송하여 ctoken을 생성합니다. 샘플 스크립트에서는 Ropsten의 10 Dai를 이용하여 cDai를 생성하도록 작성되어있습니다.
