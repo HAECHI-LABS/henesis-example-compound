@@ -18,13 +18,13 @@ const token = new web3.eth.Contract(token_abi, token_address);
 const ctoken = new web3.eth.Contract(ctoken_abi, ctoken_address);
 
 // ex. 1 dai = 10**18 = 1000000000000000000
-// amount는 ctoken을 만들기 위해 제공하는 token의 양 입니다
+// amount는 출금할 dai 양을 뜻합니다.
 const amount = new BN('10000000000000000000');
-async function mint(){
-  const mint_encoded = ctoken.methods.mint(amount).encodeABI();
-  console.log(mint_encoded);
-  const mint_response = await userContractCall(ctoken_address, 0, mint_encoded);
-  console.log(mint_response);
-  console.log(await getTransaction(mint_response.id));
+async function repay(){
+  const repay_encoded = ctoken.methods.redeemUnderlying(amount).encodeABI();
+  console.log(repay_encoded);
+  const repay_response = await userContractCall(ctoken_address,0,repay_encoded);
+  console.log(repay_response);
+  console.log(await getTransaction(repay_response.id));
 }
-mint();
+repay();

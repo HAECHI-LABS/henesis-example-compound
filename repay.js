@@ -18,7 +18,7 @@ const token = new web3.eth.Contract(token_abi, token_address);
 const ctoken = new web3.eth.Contract(ctoken_abi, ctoken_address);
 
 // ex. 1 dai = 10**18 = 1000000000000000000
-// amount는 빌릴 dai 양을 뜻합니다.
+// amount는 반환할 dai 양을 뜻합니다.
 const amount = new BN('10000000000000000000');
 async function repay(){
   const repay_encoded = ctoken.methods.repayBorrow(amount).encodeABI();
