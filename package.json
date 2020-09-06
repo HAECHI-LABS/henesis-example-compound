@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/HAECHI-LABS/henesis-example-compound#readme",
   "dependencies": {
-    "@haechi-labs/henesis-wallet-core": "^2.3.2",
+    "axios": "^0.20.0",
     "bn.js": "^5.1.3",
     "web3": "^1.2.11"
   }

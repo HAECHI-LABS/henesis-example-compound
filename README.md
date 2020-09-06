@@ -8,7 +8,7 @@ node를 설치하시고, 프로젝트 폴더에서 npm install을 실행합니�
 
 ## Configuration
 
-config.json에 masterWalletId와 userWalletId를 채워넣습니다
+config.json에 enclave URL, masterWalletId와 userWalletId를 채워넣습니다
 
 credentials.json에 henesis dashboard에서 제공하는 secret, accessToken을 각각 secret, token에 넣고,
 
