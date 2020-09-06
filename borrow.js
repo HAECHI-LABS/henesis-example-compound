@@ -3,7 +3,7 @@ const {BN} = require('bn.js');
 //env :3 == mainnet
 const {userContractCall, getTransaction} = require('./call.js');
 const Web3 = require('web3');
-const web3 = new Web3(`http://localhost:8545`);
+const web3 = new Web3(``);
 
 const token_abi = require('./abis/token.json');;
 const ctoken_abi = require('./abis/ctoken.json');
