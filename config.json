@@ -1,5 +1,7 @@
 {
   "enclaveUrl":"http://localhost:3000",
-  "masterWalletId":"3664993f24bee982c3e782b97da5973a",
-  "userWalletId":"140210fa83e9843de297109e7acc273b"
+  "masterWalletId":"",
+  "userWalletId":"",
+  "token_address":"",
+  "ctoken_address":""
 }
