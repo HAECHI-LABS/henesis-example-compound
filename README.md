@@ -25,8 +25,6 @@ masterWallet의 비밀번호를 password에 입력합니다
 
 ## Token Setting
 
-사용할 함수에 해당하는 js파일(ex. borrow.js)에 token과 ctoken의 주소를 입력합니다
-
 해당 함수에서 사용할 토큰의 양을 amount에 입력합니다.
 
 amount는 decimal을 반영한 값이어야 합니다
